@@ -1,0 +1,60 @@
+In the provided code, object-oriented programming (OOP) concepts are used through the implementation of a class (File) to encapsulate related properties and methods. Let's break down how OOP is applied in this example:
+
+Class Definition (File):
+
+
+class File {
+  constructor(fileName, fileSize, fileType) {
+    this.fileName = fileName;
+    this.fileSize = fileSize;
+    this.fileType = fileType;
+    this.uploadDate = new Date();
+  }
+
+  getFileDetails() {
+    return {
+      fileName: this.fileName,
+      fileSize: this.fileSize,
+      fileType: this.fileType,
+      uploadDate: this.uploadDate,
+    };
+  }
+}
+Constructor Method: The constructor method is like a special method that gets called when a new instance of the class is created (new File(...)). It initializes the properties of the instance (fileName, fileSize, fileType, uploadDate).
+Method (getFileDetails): The getFileDetails method is a function associated with instances of the class. It returns an object containing details about the file.
+Schema Definition (fileSchema):
+
+Copy code
+const fileSchema = new mongoose.Schema({
+  fileName: {
+    type: String,
+    required: true,
+  },
+  fileSize: {
+    type: Number,
+    required: true,
+  },
+  fileType: {
+    type: String,
+    required: true,
+  },
+  uploadDate: {
+    type: Date,
+    default: Date.now,
+  },
+});
+The fileSchema object defines the structure of the data that will be stored in the MongoDB database.
+It uses OOP principles by organizing related properties (fileName, fileSize, fileType, uploadDate) into a schema, which is akin to a blueprint.
+Model Creation (FileModel):
+
+const FileModel = mongoose.model('File', fileSchema);
+The FileModel is created using mongoose.model, associating the fileSchema with a model name ('File').
+This model is what interacts with the MongoDB database and represents a collection of documents with properties specified in the schema.
+Exporting the Class and Model:
+
+
+module.exports = { File, FileModel };
+
+The class (File) and the model (FileModel) are exported to make them accessible in other files.
+This encapsulation allows other parts of the application to use the File class for creating file instances and the FileModel for interacting with the database.
+By using a class (File), this code employs the principles of encapsulation, abstraction, and modularity, which are fundamental to object-oriented programming. 

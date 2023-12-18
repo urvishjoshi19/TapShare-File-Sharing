@@ -1,0 +1,22 @@
+Class:
+
+The code defines a class named EmailConfig. A class is a blueprint for creating objects that encapsulate data and behavior.
+Constructor:
+
+The class has a constructor method that is called when an instance of the class is created. In the constructor, an instance of the nodemailer transporter is created, initializing the email configuration with the provided Gmail service credentials.
+Encapsulation:
+
+The class encapsulates the email configuration details within its scope. The transporter and its configuration details are private to the class, preventing direct access from outside the class.
+Method:
+
+The class has a method named sendEmail. Methods are functions associated with an object, and in this case, the method is responsible for sending emails.
+The method uses the configured transporter to send an email to the specified recipient (to). The method takes parameters for email subject (subject) and email body text (text).
+Asynchronous Operations:
+
+The sendEmail method is marked as async, indicating that it performs asynchronous operations, such as sending an email. It uses await to handle the asynchronous nature of email sending.
+Error Handling:
+
+The class implements error handling within the sendEmail method. If an error occurs during the email sending process, it is caught, logged to the console, and an error is thrown to indicate the failure.
+Exporting the Class:
+
+The class is exported as a module, allowing other parts of the application to create instances of EmailConfig and use its methods.

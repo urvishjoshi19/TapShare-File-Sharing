@@ -1,0 +1,21 @@
+Encapsulation:
+
+The class encapsulates the functionality related to handling file uploads using Multer. All the logic and configuration related to file upload are encapsulated within this class. The internal details of how Multer is configured and how file uploads are handled are hidden from the external code that uses this class.
+Constructor:
+
+The constructor initializes the UploadMiddleware object with a default destination folder for storing uploaded files. It sets up Multer's disk storage with a specified destination and filename configuration.
+Default Parameter:
+
+The constructor uses a default parameter (destinationFolder = 'uploads/') for the destination folder. This allows the class to be instantiated with a custom destination folder, but if none is provided, it defaults to the 'uploads/' folder.
+Composition:
+
+The class uses composition by incorporating an instance of Multer (this.upload) within itself. This promotes a modular and flexible design where Multer's functionality is utilized as part of the overall middleware.
+Method:
+
+The handleUpload method is defined to return the middleware function for handling file uploads. This method abstracts away the details of Multer's single middleware and provides a clean interface for using this middleware in other parts of the application.
+Single Responsibility Principle (SRP):
+
+The class follows the Single Responsibility Principle by focusing on a specific responsibility: handling file uploads. It is responsible for configuring Multer and providing a middleware function for handling file uploads, keeping the code organized and maintainable.
+Instance Creation and Export:
+
+An instance of the UploadMiddleware class is created using module.exports = new UploadMiddleware();. This promotes a singleton pattern, ensuring that there is only one instance of the middleware throughout the application, preventing unnecessary duplication.

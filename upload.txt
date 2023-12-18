@@ -1,0 +1,20 @@
+Class and Object:
+
+Class (File): The File class is used to define a blueprint for creating instances representing files. It encapsulates the properties (fileName, fileSize, fileType, uploadDate) and behavior (getFileDetails method) related to files.
+Object (newFile): Instances of the File class, such as newFile, represent individual files. Each object has its own set of properties and can perform actions defined by the class.
+Encapsulation:
+
+Private Properties and Methods: Although JavaScript does not have strict visibility modifiers, the properties of the File class are encapsulated within the class, and they can only be accessed or modified through the class's public methods.
+getFileDetails Method: The getFileDetails method encapsulates the behavior of retrieving specific details about a file. It abstracts away the implementation details from external code.
+Abstraction:
+
+File Class: The File class abstracts the concept of a file, providing a simplified interface for creating and interacting with file objects. External code does not need to know the internal workings of the class to use it effectively.
+Inheritance (Not Explicitly Used):
+
+In the provided code, there is no explicit use of inheritance. However, in a more complex application, you might have a base class for generic entities (e.g., Entity) that the File class could extend.
+Polymorphism (Not Explicitly Used):
+
+Polymorphism allows objects of different classes to be treated as objects of a common base class. In this specific example, there is no explicit use of polymorphism. However, you might extend the model to include multiple types of entities that share common behavior.
+Constructor:
+
+The constructor function in the File class initializes the properties of a file when a new instance is created. It follows the OOP concept of constructing objects with an initial state.

@@ -1,0 +1,21 @@
+Encapsulation:
+
+The Database class encapsulates the data and operations related to managing a database. The internal data property is hidden from external access, and all interactions with the data are done through methods provided by the class.
+Constructor:
+
+The constructor method is used to initialize the data property when a new instance of the Database class is created. This reflects the concept of instantiation, where an object is created and initialized.
+Methods as Operations:
+
+Each method in the class represents a specific operation that can be performed on the database, such as creating a collection, inserting a document, finding documents, updating documents, and deleting documents. This reflects the concept of methods as behaviors associated with an object.
+Abstraction:
+
+The class abstracts away the complexities of database operations. Users of the class don't need to know the internal details of how data is stored or queried; they only need to call the appropriate methods.
+Single Responsibility Principle:
+
+Each method in the class has a single responsibility related to a specific database operation. For example, the findOne method finds a single document based on a query, and the insertOne method inserts a single document. This adheres to the principle that a class should have only one reason to change.
+Reuse of Code:
+
+The matchQuery method is used internally by several other methods to determine whether a document matches a given query. This demonstrates code reuse, as the matching logic is centralized in one method and can be used by multiple other methods.
+State Management:
+
+The data property represents the state of the database. The class provides methods to modify this state, such as adding documents, updating documents, and deleting documents. This reflects the concept of managing and modifying the state of an object.
